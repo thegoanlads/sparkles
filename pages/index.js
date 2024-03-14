@@ -1,4 +1,5 @@
 import { BadgeMessage, BadgeGroup, BadgeIcon } from "@components/Badge";
+import { Carousel } from "@components/Carousel";
 import { SectionContainer } from "@components/Section";
 import { PageTitle } from "@components/Title";
 import { Layout } from "@components/Layout";
@@ -16,17 +17,33 @@ import {
     CardImage,
     Card
 } from "@components/Card";
+const DATA = [
+    { image: "https://picsum.photos/id/1018/1920/1080/" },
+    { image: "https://picsum.photos/id/1015/1920/1080/" },
+    { image: "https://picsum.photos/id/1018/1920/1080/" },
+    { image: "https://picsum.photos/id/1015/1920/1080/" },
+    { image: "https://picsum.photos/id/1018/1920/1080/" },
+    { image: "https://picsum.photos/id/1015/1920/1080/" },
+    { image: "https://picsum.photos/id/1018/1920/1080/" },
+    { image: "https://picsum.photos/id/1015/1920/1080/" },
+    { image: "https://picsum.photos/id/1018/1920/1080/" },
+    { image: "https://picsum.photos/id/1015/1920/1080/" },
+    { image: "https://picsum.photos/id/1018/1920/1080/" },
+    { image: "https://picsum.photos/id/1015/1920/1080/" }
+];
 
 export default function Home() {
     return (
         <Layout className="">
             <SEO
-                title="NutriTrack - A landing page template 🚀"
-                description="Discover NutriTrack, the effortless way to plan your meals with the power of Notion. Streamline your nutrition journey and achieve your health goals with ease."
+                title="sparkles - A landing page template 🚀"
+                description="Discover sparkles, the effortless way to plan your meals with the power of Notion. Streamline your nutrition journey and achieve your health goals with ease."
             />
             <div className="main-wrapper bg-[#F3F5F8] relative z-10 pb-20 pt-20 ">
                 {/* { Page Banner } */}
                 <HomeBanner />
+                {/* { Carousel Banner } */}
+                <Carousel data={DATA} />
                 {/* Components Container */}
                 <SectionContainer className="components--container wrap wrap-px grid gap-8 sm:gap-24">
                     {/* Features */}
@@ -41,16 +58,15 @@ export default function Home() {
                                 className="text-center mx-auto"
                                 type="default"
                             >
-                                Simplify Your Nutrition Journey with NutriTrack
+                                Simplify Your Nutrition Journey with sparkles
                             </PageTitle>
                             <Content className="text-center" alignment="center">
                                 <p>
-                                    Hey there! Welcome to NutriTrack, the
-                                    ultimate nutrition meal planner powered by
-                                    Notion. We&apos;ve got some awesome features
-                                    lined up to make your nutrition journey a
-                                    piece of cake (pun intended). Check them
-                                    out:
+                                    Hey there! Welcome to sparkles, the ultimate
+                                    nutrition meal planner powered by Notion.
+                                    We&apos;ve got some awesome features lined
+                                    up to make your nutrition journey a piece of
+                                    cake (pun intended). Check them out:
                                 </p>
                             </Content>
                             <ContentImage />
@@ -115,12 +131,12 @@ export default function Home() {
                                         <p>
                                             Celebrate your wins and stay
                                             motivated on your nutrition journey.
-                                            NutriTrack allows you to monitor
-                                            your progress with weight,
-                                            measurements, and other key metrics.
-                                            Track your improvements over time
-                                            and see the positive impact of your
-                                            healthy choices.
+                                            sparkles allows you to monitor your
+                                            progress with weight, measurements,
+                                            and other key metrics. Track your
+                                            improvements over time and see the
+                                            positive impact of your healthy
+                                            choices.
                                         </p>
                                     </CardBody>
                                 </Card>
@@ -140,8 +156,7 @@ export default function Home() {
                                 <BadgeIcon icon="twemoji:waving-hand" />
                             </BadgeGroup>
                             <PageTitle className="" type="default">
-                                This is what our customers have to say about
-                                this template
+                                What customers have to say about us
                             </PageTitle>
                             <Columns />
                         </SectionContainer>
@@ -158,14 +173,31 @@ export default function Home() {
                                 className="text-center mx-auto"
                                 type="default"
                             >
-                                Got some burning questions about NutriTrack?{" "}
-                                <br></br>
-                                <br></br>No worries! We&apos;ve got the answers
-                                you need:
+                                Got questions?
                             </PageTitle>
                             <Accordion />
                         </SectionContainer>
                     </MotionBTTContainer>
+                    {/* Features */}
+                    <SectionContainer id="features" className="features">
+                        <BadgeGroup alignment="center">
+                            <BadgeMessage>Contact</BadgeMessage>
+                        </BadgeGroup>
+                        <PageTitle
+                            className="text-center mx-auto"
+                            type="default"
+                        >
+                            Ready to transform your space?
+                        </PageTitle>
+                        <Content className="text-center" alignment="center">
+                            <p>
+                                Contact our team for a consultation. Whether you
+                                have a specific project in mind or need
+                                guidance, we&apos;re here to help. Reach out to
+                                us or use our convenient online form.
+                            </p>
+                        </Content>
+                    </SectionContainer>
                 </SectionContainer>
             </div>
         </Layout>

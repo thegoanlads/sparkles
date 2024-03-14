@@ -7,30 +7,52 @@ import clsx from "clsx";
 const accordionData = [
     {
         id: uuid(),
-        title: "What is Notion?",
+        title: "What services does Sparkling Star Company offer?",
         isOpen: true,
         content:
-            "Notion is an all-in-one productivity tool that allows you to create notes, databases, and collaborative workspaces, making it easy to organize and manage your tasks, projects, and ideas in one place."
+            "Sparkling Star is a comprehensive interior design and fitout company, offering a range of services that encompass 3D visualization, project management, furniture manufacturing, and furniture procurement. Our expertise extends to technical solutions, including plumbing, HVAC, lighting, and electrical works."
     },
     {
         id: uuid(),
-        title: "Who is this template for?",
+        title: "How can I initiate the process of availing your services?",
         isOpen: false,
         content:
-            "This template is specifically designed for Notion creators who want to create a personalized landing page for their Notion workspace, showcasing their projects, services, or content in a visually appealing manner."
+            "Getting started is easy! Simply reach out to us through our website to schedule a consultation or fill out the contact form on our website or give us a call. We'll promptly get in touch to discuss your project and set up a meeting at your convenience."
     },
     {
         id: uuid(),
-        title: "Do I need to pay for this?",
-        isOpen: false,
-        content: "No, this is free."
-    },
-    {
-        id: uuid(),
-        title: "Where can I ask more questions about this template?",
+        title: "What types of projects does your company undertake?",
         isOpen: false,
         content:
-            "If you have any further questions or need assistance regarding this template, please feel free to reach out to me on my website, or click the Contact within the navigation links."
+            "Sparkling Star undertakes projects in various sectors, including commercial offices, retail spaces, hospitality, residential renovations, healthcare facilities, educational institutions, cultural spaces, and industrial facilities. We blend creativity and technical expertise to transform various spaces into functional and visually appealing environments."
+    },
+    {
+        id: uuid(),
+        title: "What is the typical timeline for a project involving interior design, fitout, and technical services?",
+        isOpen: false,
+        content:
+            "The timeline for an interior design & fit-out services project varies depending on the project's size and complexity. It typically involves initial client meetings, site assessments, concept development, detailed planning, approvals and permits, material procurement, production or construction, joinery and a final handover."
+    },
+    {
+        id: uuid(),
+        title: "How do you handle unexpected challenges during a project?",
+        isOpen: false,
+        content:
+            "Our approach to handling unexpected challenges during a project is rooted in our experienced and solutions-oriented team. In the rare event of unforeseen issues, we prioritize a proactive mindset to swiftly address and resolve challenges. Our team's adaptability and problem-solving skills contribute to maintaining the project's overall efficiency and success, providing our clients with confidence in our ability to navigate unexpected hurdles effectively."
+    },
+    {
+        id: uuid(),
+        title: "Can your design and fit-out services be customized for small-scale residential projects as well as large commercial ventures?",
+        isOpen: false,
+        content:
+            "Absolutely! From small-scale residential projects to large-scale commercial developments, we handle projects of all sizes. Because of our adaptability, we can customize our services to each client's unique needs."
+    },
+    {
+        id: uuid(),
+        title: "How involved will I be in the decision-making process for my project?",
+        isOpen: false,
+        content:
+            "We highly value client input and collaboration. Throughout the project, we keep you informed and involved in decision-making to ensure the final result aligns with your vision and expectations. We provide end-to-end services, including sourcing and selecting furniture and decor items that align with the design concept and preferences."
     }
 ];
 
@@ -48,7 +70,7 @@ export const Accordion = () => {
     };
 
     return (
-        <SectionContainer className="accordion--container my-16 drop-shadow-xl max-w-3xl mx-auto offset-y-0 offset-x-8">
+        <SectionContainer className="accordion--container my-16 drop-shadow-xl max-w-4xl mx-auto offset-y-0 offset-x-8">
             {accordionData.map((accordionItem, index) => (
                 <div
                     key={accordionItem.id}

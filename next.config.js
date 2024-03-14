@@ -11,7 +11,12 @@ const nextConfig = {
     },
     images: {
         formats: ["image/avif", "image/webp"],
-        domains: ["s.gravatar.com"]
+        domains: ["s.gravatar.com"],
+        remotePatterns: [
+            {
+                hostname: "picsum.photos"
+            }
+        ]
     },
     env: {
         siteTitle: "Your Company",

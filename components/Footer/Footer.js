@@ -3,10 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { ButtonGroup } from "@components/Button";
 import { Icon } from "@iconify/react";
+import { ThemeChanger } from "@components/Theme";
 
 const DATA = [
     {
-        title: "Template",
+        title: "Useful links",
         items: [
             {
                 label: "Features",
@@ -23,26 +24,26 @@ const DATA = [
         ]
     },
     {
-        title: "Company",
+        title: "Contact info",
         items: [
             {
                 label: "About",
-                href: "https://github.com/christian-luntok/",
+                href: "https://sparklingstaruae.com/",
                 target: "_blank"
             },
             {
                 label: "Twitter",
-                href: "https://github.com/christian-luntok/",
+                href: "https://sparklingstaruae.com/",
                 target: "_blank"
             },
             {
                 label: "Instagram",
-                href: "https://github.com/christian-luntok/",
+                href: "https://sparklingstaruae.com/",
                 target: "_blank"
             },
             {
                 label: "Facebook",
-                href: "https://github.com/christian-luntok/",
+                href: "https://sparklingstaruae.com/",
                 target: "_blank"
             }
         ]
@@ -75,7 +76,7 @@ export const Footer = () => {
                                 <ButtonGroup alignment="left">
                                     <a
                                         role="button"
-                                        href="https://github.com/christian-luntok/nutritrack"
+                                        href="https://sparklingstaruae.com/nutritrack"
                                         className="btn btn--secondary"
                                     >
                                         Get Template
@@ -127,17 +128,8 @@ export const Footer = () => {
             <SectionContainer className="footer-credits relative z-10">
                 <div className="wrap wrap-px py-6">
                     <p className="my-0">
-                        © {year} Nutritrack. All rights reserved{" - "}
-                        <span className="font-normal">
-                            A template by{" "}
-                            <Link
-                                className="transition-colors duration-300 hover:underline"
-                                href="https://chrstnl.com"
-                                target="_blank"
-                            >
-                                chrstnl.
-                            </Link>
-                        </span>
+                        © {year} sparkles. All rights reserved{" - "}
+                        <ThemeChanger />
                     </p>
                 </div>
             </SectionContainer>
