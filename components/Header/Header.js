@@ -16,7 +16,6 @@ export const Header = () => {
                     <h1 className="logo mb-0">
                         <Link href="/">
                             <Image
-                                src="/nutritrack.svg"
                                 src="/sparkles.png"
                                 alt="logo"
                                 className="h-6 w-auto"
