@@ -17,10 +17,11 @@ export const Header = () => {
                         <Link href="/">
                             <Image
                                 src="/nutritrack.svg"
+                                src="/sparkles.png"
                                 alt="logo"
                                 className="h-6 w-auto"
-                                height="24"
-                                width="100"
+                                height="100"
+                                width="200"
                                 priority
                             />
                         </Link>
@@ -34,7 +35,7 @@ export const Header = () => {
                             href="https://sparklingstaruae.com/nutritrack"
                             className="btn btn--secondary ml-4"
                         >
-                            Get Template
+                            Get in touch
                             <Icon icon="material-symbols:arrow-forward-rounded" />
                         </a>
                     </ButtonGroup>
