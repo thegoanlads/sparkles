@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ButtonGroup } from "@components/Button";
 import { Icon } from "@iconify/react";
 import { ThemeChanger } from "@components/Theme";
+import { useTheme } from "next-themes";
 
 const DATA = [
     {
@@ -51,11 +52,15 @@ const DATA = [
 ];
 
 export const Footer = () => {
+    const { theme, setTheme } = useTheme();
     const date = new Date();
     const year = date.getFullYear();
 
     return (
-        <footer id="footer" className="bg-white">
+        <footer
+            id="footer"
+            className={`bg-${theme == "light" ? "white" : "black"}`}
+        >
             {/* Footer Links */}
             <SectionContainer className="footer--container wrap wrap-px relative z-10">
                 <div className="footer--content-container py-16">
@@ -64,7 +69,7 @@ export const Footer = () => {
                             <div className="footer--logo grid gap-8">
                                 <Link href="/">
                                     <Image
-                                        src="/nutritrack.svg"
+                                        src="/sparkles.png"
                                         alt="logo"
                                         className="h-10 w-auto"
                                         height="25"
@@ -76,10 +81,10 @@ export const Footer = () => {
                                 <ButtonGroup alignment="left">
                                     <a
                                         role="button"
-                                        href="https://sparklingstaruae.com/nutritrack"
+                                        href="https://sparklingstaruae.com/contact"
                                         className="btn btn--secondary"
                                     >
-                                        Get Template
+                                        Get in touch
                                         <Icon icon="material-symbols:arrow-forward-rounded" />
                                     </a>
                                 </ButtonGroup>
@@ -128,7 +133,7 @@ export const Footer = () => {
             <SectionContainer className="footer-credits relative z-10">
                 <div className="wrap wrap-px py-6">
                     <p className="my-0">
-                        © {year} sparkles. All rights reserved{" - "}
+                        © {year} Sparkles. All rights reserved{" - "}
                         <ThemeChanger />
                     </p>
                 </div>

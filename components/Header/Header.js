@@ -31,7 +31,7 @@ export const Header = () => {
                     <ButtonGroup className="hidden md:block">
                         <a
                             role="button"
-                            href="https://sparklingstaruae.com/nutritrack"
+                            href="https://sparklingstaruae.com/contact"
                             className="btn btn--secondary ml-4"
                         >
                             Get in touch

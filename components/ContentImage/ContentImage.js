@@ -1,5 +1,6 @@
 import { SectionContainer } from "@components/Section";
 import { Icon } from "@iconify/react";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import { v4 as uuid } from "uuid";
 
@@ -39,6 +40,8 @@ const ContentImageData = [
 ];
 
 export const ContentImage = () => {
+    const { theme, setTheme } = useTheme();
+
     return (
         <SectionContainer className="process-items mt-16 space-y-16">
             {ContentImageData.map((item) => (
@@ -66,13 +69,13 @@ export const ContentImage = () => {
                             item.align === "left"
                                 ? "md:pr-16 lg:pr-24 xl:pr-32 ml-auto"
                                 : "md:pl-16 lg:pl-24 xl:pl-32  mr-auto"
-                        } my-auto content text-black/60`}
+                        } my-auto content text-gray/60`}
                     >
-                        <h3 className="mb-6 h4 md:h3 font-semibold text-black">
+                        <h3 className="mb-6 h4 md:h3 font-semibold text-gray/60">
                             {item.title}
                         </h3>
                         <p>{item.content}</p>
-                        {/* <ul className="process-item--list space-y-3">
+                        <ul className="process-item--list space-y-3">
                             {item.listItems?.length &&
                                 item.listItems.map((listItem) => (
                                     <li
@@ -87,7 +90,7 @@ export const ContentImage = () => {
                                         {listItem.content}
                                     </li>
                                 ))}
-                        </ul> */}
+                        </ul>
                     </div>
                 </div>
             ))}

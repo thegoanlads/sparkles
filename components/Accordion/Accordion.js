@@ -3,6 +3,7 @@ import { Icon } from "@iconify/react";
 import { useState } from "react";
 import { v4 as uuid } from "uuid";
 import clsx from "clsx";
+import { useTheme } from "next-themes";
 
 const accordionData = [
     {
@@ -63,6 +64,7 @@ const accordionItemType = {
 };
 
 export const Accordion = () => {
+    const { theme, setTheme } = useTheme();
     const [activeAccordion, setActiveAccordion] = useState(null);
 
     const accordionClickHandle = (id) => {
@@ -76,7 +78,7 @@ export const Accordion = () => {
                     key={accordionItem.id}
                     id={accordionItem.id}
                     className={clsx(
-                        "accordion-item--container border border-neutral-200 bg-white overflow-hidden",
+                        "accordion-item--container border border-neutral-200 overflow-hidden",
                         {
                             [accordionItemType.top]: index === 0,
                             [accordionItemType.default]:
@@ -88,7 +90,7 @@ export const Accordion = () => {
                 >
                     <h2 className="accordion-item--heading mb-0">
                         <button
-                            className="group relative flex w-full font-semibold items-center rounded-t-lg border-0 bg-white py-4 px-5 text-left text-base text-neutral-800 transition"
+                            className={`group relative flex w-full font-semibold items-center rounded-t-lg border-0 py-4 px-5 text-left text-base transition`}
                             type="button"
                             aria-expanded={accordionItem.isOpen}
                             onClick={() =>
