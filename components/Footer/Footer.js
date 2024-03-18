@@ -1,10 +1,7 @@
 import { SectionContainer } from "@components/Section";
 import Link from "next/link";
 import Image from "next/image";
-import { ButtonGroup } from "@components/Button";
-import { Icon } from "@iconify/react";
 import { ThemeChanger } from "@components/Theme";
-import { useTheme } from "next-themes";
 
 const DATA = [
     {
@@ -52,15 +49,11 @@ const DATA = [
 ];
 
 export const Footer = () => {
-    const { theme, setTheme } = useTheme();
     const date = new Date();
     const year = date.getFullYear();
 
     return (
-        <footer
-            id="footer"
-            className={`bg-${theme == "light" ? "white" : "black"}`}
-        >
+        <footer id="footer">
             {/* Footer Links */}
             <SectionContainer className="footer--container wrap wrap-px relative z-10">
                 <div className="footer--content-container py-16">
