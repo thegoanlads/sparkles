@@ -71,7 +71,7 @@ export const ContentImage = () => {
                             item.align === "left"
                                 ? "md:pr-16 lg:pr-24 xl:pr-32 ml-auto"
                                 : "md:pl-16 lg:pl-24 xl:pl-32  mr-auto"
-                        } my-auto content text-gray/60`}
+                        } my-auto content text-gray`}
                     >
                         <h3 className="mb-6 h4 md:h3 font-semibold text-center">
                             {item.title}

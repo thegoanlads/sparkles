@@ -43,7 +43,7 @@ export const Columns = () => {
                     className="benefits-list--item text-[#737373] text-left"
                 >
                     <Icon icon={item.icon} className="mb-4 w-10 h-10 my-2" />
-                    <h3 className="text-xl mb-2 font-medium text-gray/60">
+                    <h3 className="text-xl mb-2 font-medium text-gray">
                         {item.title}
                     </h3>
                     <p>{item.content}</p>
