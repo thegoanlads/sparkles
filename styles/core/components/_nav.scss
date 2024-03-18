@@ -8,7 +8,7 @@
 
 @layer components {
     .header-nav {
-        @apply text-black/60;
+        @apply text-white dark:text-black;
     }
     .header-nav--container {
     }
@@ -26,9 +26,9 @@
     .header-nav--menu-item {
     }
     .menu-item--link {
-        @apply block rounded py-2 pl-3 pr-4 transition-colors duration-300 md:bg-transparent md:p-0 md:p-0 lg:text-black md:hover:underline;
+        @apply block rounded py-2 pl-3 pr-4 transition-colors duration-300 md:bg-transparent md:p-0 md:p-0 md:hover:underline;
         &.active {
-            @apply bg-primary-700 text-white text-black lg:bg-white;
+            @apply bg-primary-700 text-black lg:bg-white;
         }
     }
 }

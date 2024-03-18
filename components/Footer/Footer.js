@@ -3,10 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { ButtonGroup } from "@components/Button";
 import { Icon } from "@iconify/react";
+import { ThemeChanger } from "@components/Theme";
+import { useTheme } from "next-themes";
 
 const DATA = [
     {
-        title: "Template",
+        title: "Useful links",
         items: [
             {
                 label: "Features",
@@ -23,26 +25,26 @@ const DATA = [
         ]
     },
     {
-        title: "Company",
+        title: "Contact info",
         items: [
             {
                 label: "About",
-                href: "https://github.com/christian-luntok/",
+                href: "https://sparklingstaruae.com/",
                 target: "_blank"
             },
             {
                 label: "Twitter",
-                href: "https://github.com/christian-luntok/",
+                href: "https://sparklingstaruae.com/",
                 target: "_blank"
             },
             {
                 label: "Instagram",
-                href: "https://github.com/christian-luntok/",
+                href: "https://sparklingstaruae.com/",
                 target: "_blank"
             },
             {
                 label: "Facebook",
-                href: "https://github.com/christian-luntok/",
+                href: "https://sparklingstaruae.com/",
                 target: "_blank"
             }
         ]
@@ -50,11 +52,15 @@ const DATA = [
 ];
 
 export const Footer = () => {
+    const { theme, setTheme } = useTheme();
     const date = new Date();
     const year = date.getFullYear();
 
     return (
-        <footer id="footer" className="bg-white">
+        <footer
+            id="footer"
+            className={`bg-${theme == "light" ? "white" : "black"}`}
+        >
             {/* Footer Links */}
             <SectionContainer className="footer--container wrap wrap-px relative z-10">
                 <div className="footer--content-container py-16">
@@ -63,7 +69,7 @@ export const Footer = () => {
                             <div className="footer--logo grid gap-8">
                                 <Link href="/">
                                     <Image
-                                        src="/nutritrack.svg"
+                                        src="/sparkles.png"
                                         alt="logo"
                                         className="h-10 w-auto"
                                         height="25"
@@ -71,17 +77,6 @@ export const Footer = () => {
                                         priority
                                     />
                                 </Link>
-                                {/* Get Template button; remove if not used */}
-                                <ButtonGroup alignment="left">
-                                    <a
-                                        role="button"
-                                        href="https://github.com/christian-luntok/nutritrack"
-                                        className="btn btn--secondary"
-                                    >
-                                        Get Template
-                                        <Icon icon="material-symbols:arrow-forward-rounded" />
-                                    </a>
-                                </ButtonGroup>
                             </div>
                         </div>
                         <div className="col-span-6">
@@ -127,17 +122,8 @@ export const Footer = () => {
             <SectionContainer className="footer-credits relative z-10">
                 <div className="wrap wrap-px py-6">
                     <p className="my-0">
-                        © {year} Nutritrack. All rights reserved{" - "}
-                        <span className="font-normal">
-                            A template by{" "}
-                            <Link
-                                className="transition-colors duration-300 hover:underline"
-                                href="https://chrstnl.com"
-                                target="_blank"
-                            >
-                                chrstnl.
-                            </Link>
-                        </span>
+                        © {year} Sparkles. All rights reserved{" - "}
+                        <ThemeChanger />
                     </p>
                 </div>
             </SectionContainer>

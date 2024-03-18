@@ -9,18 +9,18 @@ export const Header = () => {
     return (
         <header
             id="header"
-            className="header fixed left-0 w-full z-30 top-0 bg-white backdrop-filter backdrop-blur-md bg-opacity-50"
+            className="header fixed left-0 w-full z-30 top-0 backdrop-filter dark:bg-white bg-black backdrop-blur-lg"
         >
-            <SectionContainer className="header--container wrap wrap-px ">
+            <SectionContainer className="header--container wrap wrap-px">
                 <div className="header-logo--container">
                     <h1 className="logo mb-0">
                         <Link href="/">
                             <Image
-                                src="/nutritrack.svg"
+                                src="/sparkles.png"
                                 alt="logo"
                                 className="h-6 w-auto"
-                                height="24"
-                                width="100"
+                                height="100"
+                                width="200"
                                 priority
                             />
                         </Link>
@@ -31,11 +31,11 @@ export const Header = () => {
                     <ButtonGroup className="hidden md:block">
                         <a
                             role="button"
-                            href="https://github.com/christian-luntok/nutritrack"
+                            href="#contact"
                             className="btn btn--secondary ml-4"
                         >
-                            Get Template
-                            <Icon icon="material-symbols:arrow-forward-rounded" />
+                            Get in touch
+                            {/* <Icon icon="material-symbols:arrow-forward-rounded" /> */}
                         </a>
                     </ButtonGroup>
                 </SectionContainer>

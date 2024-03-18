@@ -1,30 +1,51 @@
+import { Content } from "@components/Content/Content";
 import { SectionContainer } from "@components/Section";
+import { PageTitle } from "@components/Title";
 import { Icon } from "@iconify/react";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import { v4 as uuid } from "uuid";
 
 const ContentImageData = [
     {
         id: uuid(),
-        title: "Effortless Planning",
+        title: "Redefine Your Space",
         content:
-            "Say goodbye to meal planning stress! With NutriTrack, planning your meals becomes a breeze. Our user-friendly Notion template lets you create customized daily or weekly meal plans effortlessly. Enjoy a balanced and nutritious diet without the hassle.",
+            "Tailored Interior Solutions for Residential and Commercial Settings. Elevate your living and working environments with our bespoke interior solutions. Whether it's your home or business, we specialize in creating spaces that reflect your style and enhance functionality.",
         align: "right",
-        image: "/features1.png"
+        image: "/gazebo-exterior/1ge.jpeg"
     },
     {
         id: uuid(),
-        title: "Shopping List",
+        title: "Our Skills & Expertise",
         content:
-            "We've got your grocery shopping covered! NutriTrack includes a handy shopping list feature. As you plan your meals, the template automatically generates a comprehensive shopping list. No more forgotten items or aimless wandering in the supermarket. Shopping for healthy ingredients has never been easier!",
+            "At Sparkling Star, our expertise extends to both residential and commercial design. From cozy homes to dynamic workspaces, we bring a blend of creativity, technical proficiency, and client-focused dedication to every project.",
         align: "left",
-        image: "/features2.png"
+        image: "/gazebo-exterior/2ge.jpeg"
+    },
+    {
+        id: uuid(),
+        title: "Portfolio Highlights",
+        content:
+            "Explore our portfolio to witness the transformation of diverse spaces. From elegant commercial centers to comfortable residential havens, our portfolio demonstrates the adaptability and quality we bring to every project.",
+        align: "right",
+        image: "/gazebo-exterior/3ge.jpeg"
+    },
+    {
+        id: uuid(),
+        title: "Watch Our Latest Projects",
+        content:
+            "Take a visual journey through our latest residential and commercial projects in our video gallery. See how we skillfully combine design and functionality to create spaces that evoke strong emotions.",
+        align: "left",
+        image: "/gazebo-exterior/2ge.jpeg"
     }
 ];
 
 export const ContentImage = () => {
+    const { theme, setTheme } = useTheme();
+
     return (
-        <SectionContainer className="process-items mt-16 space-y-16">
+        <SectionContainer className="process-items max-w-4xl mx-auto mt-16 space-y-16">
             {ContentImageData.map((item) => (
                 <div
                     id={item.id}
@@ -38,11 +59,11 @@ export const ContentImage = () => {
                     >
                         <Image
                             src={item.image}
-                            width={512}
-                            height={512}
-                            objectFit="cover"
+                            width={412}
+                            height={330}
                             alt="Process Banner 1"
-                            className="drop-shadow-xl w-full offset-y-0 offset-x-8 blur-16"
+                            className="drop-shadow-xl rounded-md h-full offset-y-0 offset-x-8 blur-16"
+                            style={{ objectFit: "cover" }}
                         />
                     </div>
                     <div
@@ -50,12 +71,14 @@ export const ContentImage = () => {
                             item.align === "left"
                                 ? "md:pr-16 lg:pr-24 xl:pr-32 ml-auto"
                                 : "md:pl-16 lg:pl-24 xl:pl-32  mr-auto"
-                        } my-auto content text-black/60`}
+                        } my-auto content text-gray/60`}
                     >
-                        <h3 className="mb-6 h4 md:h3 font-semibold text-black">
+                        <h3 className="mb-6 h4 md:h3 font-semibold text-center">
                             {item.title}
                         </h3>
-                        <p>{item.content}</p>
+                        <p className="text-center" alignment="center">
+                            {item.content}
+                        </p>
                         <ul className="process-item--list space-y-3">
                             {item.listItems?.length &&
                                 item.listItems.map((listItem) => (

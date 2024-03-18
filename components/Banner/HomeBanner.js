@@ -14,23 +14,22 @@ export const HomeBanner = () => {
                 {/* Appear First */}
                 <MotionBTTContainer transition={{ delay: 0.2, duration: 0.5 }}>
                     <BadgeGroup alignment="center">
-                        <BadgeMessage>Discover NutriTrack!</BadgeMessage>
+                        <BadgeMessage>Discover sparkles!</BadgeMessage>
                         <BadgeIcon icon="game-icons:meal" />
                     </BadgeGroup>
                 </MotionBTTContainer>
                 {/* Appear Second */}
                 <MotionBTTContainer transition={{ delay: 0.4, duration: 0.5 }}>
                     <PageTitle className="text-center mx-auto" type="heavy">
-                        The effortless way to plan your meals with the power of
-                        Notion.
+                        The effortless way to plan.
                     </PageTitle>
                 </MotionBTTContainer>
                 {/* Appear Third */}
                 <MotionBTTContainer transition={{ delay: 0.6, duration: 0.5 }}>
                     <Content className="text-center" alignment="center">
                         <p>
-                            Streamline your nutrition journey and achieve your
-                            health goals with ease.{" "}
+                            Streamline your journey and achieve your goals with
+                            ease.{" "}
                         </p>
                     </Content>
                     <div className="mt-6 mb-16 text-center">
@@ -38,10 +37,10 @@ export const HomeBanner = () => {
                             <Button href="#features">Features</Button>
                             <a
                                 role="button"
-                                href="https://github.com/christian-luntok/nutritrack"
+                                href="#contact"
                                 className="btn btn--secondary"
                             >
-                                Get Template
+                                Get in touch
                                 <Icon icon="material-symbols:arrow-forward-rounded" />
                             </a>
                         </ButtonGroup>
@@ -51,12 +50,12 @@ export const HomeBanner = () => {
                 <MotionBTTContainer transition={{ delay: 0.8, duration: 0.5 }}>
                     <div className="page-banner--image">
                         <Image
-                            src="/nutritrack-hero-banner.png"
+                            src="/image/banners/01.jpeg"
                             width={1024}
                             height={680}
                             alt="Page Banner"
-                            objectFit="cover"
                             className="mx-auto"
+                            style={{ objectFit: "cover" }}
                         />
                     </div>
                 </MotionBTTContainer>

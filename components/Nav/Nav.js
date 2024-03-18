@@ -6,13 +6,13 @@ import { useRouter } from "next/router";
 const navigation = [
     { name: "Features", to: "#features", href: "/#features" },
     { name: "Testimonials", to: "#testimonials", href: "/#testimonials" },
-    { name: "FAQ?", to: "#faq", href: "/#faq" },
-    {
-        name: "Contact",
-        href: "https://chrstnl.com/",
-        isArrow: true,
-        target: "_blank"
-    }
+    { name: "FAQ?", to: "#faq", href: "/#faq" }
+    // { name: "Contact", to: "#contact", href: "/#contact" }
+    // {
+    //     name: "Contact",
+    //     href: "https://chrstnl.com/",
+    //     target: "_blank"
+    // }
 ];
 
 export const Nav = () => {
@@ -36,7 +36,7 @@ export const Nav = () => {
                     <span className="sr-only">Open main menu</span>
                     <Icon
                         icon="material-symbols:menu-rounded"
-                        className="h-6 w-auto text-black"
+                        className="h-6 w-auto"
                     />
                 </button>
                 <div
