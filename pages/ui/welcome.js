@@ -13,15 +13,10 @@ export const WelcomeContent = () => {
                     <BadgeMessage>Features</BadgeMessage>
                 </BadgeGroup>
                 <PageTitle className="text-center mx-auto" type="default">
-                    Simplify Your Nutrition Journey with sparkles
+                    Simplify Your Journey with sparkles
                 </PageTitle>
                 <Content className="text-center" alignment="center">
-                    <p>
-                        Hey there! Welcome to sparkles, the ultimate nutrition
-                        meal planner powered by Notion. We&apos;ve got some
-                        awesome features lined up to make your nutrition journey
-                        a piece of cake (pun intended). Check them out:
-                    </p>
+                    <p>Hey there! Welcome to sparkles:</p>
                 </Content>
                 <ContentImage />
             </SectionContainer>

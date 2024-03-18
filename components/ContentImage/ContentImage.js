@@ -1,4 +1,6 @@
+import { Content } from "@components/Content/Content";
 import { SectionContainer } from "@components/Section";
+import { PageTitle } from "@components/Title";
 import { Icon } from "@iconify/react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -43,7 +45,7 @@ export const ContentImage = () => {
     const { theme, setTheme } = useTheme();
 
     return (
-        <SectionContainer className="process-items mt-16 space-y-16">
+        <SectionContainer className="process-items max-w-4xl mx-auto mt-16 space-y-16">
             {ContentImageData.map((item) => (
                 <div
                     id={item.id}
@@ -71,10 +73,12 @@ export const ContentImage = () => {
                                 : "md:pl-16 lg:pl-24 xl:pl-32  mr-auto"
                         } my-auto content text-gray/60`}
                     >
-                        <h3 className="mb-6 h4 md:h3 font-semibold text-gray/60">
+                        <h3 className="mb-6 h4 md:h3 font-semibold text-center">
                             {item.title}
                         </h3>
-                        <p>{item.content}</p>
+                        <p className="text-center" alignment="center">
+                            {item.content}
+                        </p>
                         <ul className="process-item--list space-y-3">
                             {item.listItems?.length &&
                                 item.listItems.map((listItem) => (

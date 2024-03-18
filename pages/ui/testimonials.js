@@ -8,11 +8,11 @@ export const TestimonialsContent = () => {
     return (
         <MotionBTTContainer transition={{ delay: 0.2, duration: 0.5 }}>
             <SectionContainer id="testimonials" className="benefits">
-                <BadgeGroup alignment="left">
+                <BadgeGroup alignment="center">
                     <BadgeMessage>Testimonials</BadgeMessage>
                     <BadgeIcon icon="twemoji:waving-hand" />
                 </BadgeGroup>
-                <PageTitle className="" type="default">
+                <PageTitle className="text-center mx-auto" type="default">
                     What customers have to say about us
                 </PageTitle>
                 <Columns />

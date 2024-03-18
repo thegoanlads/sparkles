@@ -77,17 +77,6 @@ export const Footer = () => {
                                         priority
                                     />
                                 </Link>
-                                {/* Get Template button; remove if not used */}
-                                <ButtonGroup alignment="left">
-                                    <a
-                                        role="button"
-                                        href="https://sparklingstaruae.com/contact"
-                                        className="btn btn--secondary"
-                                    >
-                                        Get in touch
-                                        <Icon icon="material-symbols:arrow-forward-rounded" />
-                                    </a>
-                                </ButtonGroup>
                             </div>
                         </div>
                         <div className="col-span-6">

@@ -8,6 +8,7 @@ import { CarouselContent } from "./ui/carousel";
 import { WelcomeContent } from "./ui/welcome";
 import { HomePageSEO } from "./ui/seo";
 import { useTheme } from "next-themes";
+import { Hero } from "@components/Hero";
 
 export default function Home() {
     const { theme, setTheme } = useTheme();
@@ -18,14 +19,16 @@ export default function Home() {
             <div
                 className={`main-wrapper bg-[${
                     theme == "light" ? "#F3F5F8" : "#14191a"
-                }] relative z-10 pb-20 pt-20`}
+                }] relative z-10 pb-16 pt-16`}
             >
+                {/* { Page Hero } */}
+                <Hero />
                 {/* { Page Banner } */}
-                <HomeBanner />
+                {/* <HomeBanner /> */}
                 {/* { Carousel Banner } */}
                 <CarouselContent />
                 {/* Components Container */}
-                <SectionContainer className="components--container wrap wrap-px grid gap-8 sm:gap-24">
+                <SectionContainer className="components--container wrap wrap-px grid gap-8 pt-10 sm:gap-24">
                     {/* Features */}
                     <WelcomeContent />
                     {/* Testimonials */}

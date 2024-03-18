@@ -37,10 +37,10 @@ export const HomeBanner = () => {
                             <Button href="#features">Features</Button>
                             <a
                                 role="button"
-                                href="https://sparklingstaruae.com/sparkles"
+                                href="#contact"
                                 className="btn btn--secondary"
                             >
-                                Get Template
+                                Get in touch
                                 <Icon icon="material-symbols:arrow-forward-rounded" />
                             </a>
                         </ButtonGroup>

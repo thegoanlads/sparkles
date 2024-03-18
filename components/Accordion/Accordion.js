@@ -64,7 +64,6 @@ const accordionItemType = {
 };
 
 export const Accordion = () => {
-    const { theme, setTheme } = useTheme();
     const [activeAccordion, setActiveAccordion] = useState(null);
 
     const accordionClickHandle = (id) => {
