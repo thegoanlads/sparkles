@@ -10,9 +10,8 @@
 
 # next.js
 /.next/
-/out/
 /.vscode/
-package-lock.json
+/out/
 
 # production
 /build
@@ -36,3 +35,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+pnpm-lock.yaml
