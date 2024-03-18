@@ -1,3 +1,4 @@
+import { BadgeGroup, BadgeIcon, BadgeMessage } from "@components/Badge";
 import {
     CardBody,
     CardGroup,
@@ -5,6 +6,10 @@ import {
     CardImage,
     Card
 } from "@components/Card";
+import { Content } from "@components/Content";
+import { MotionBTTContainer } from "@components/Motion";
+import { SectionContainer } from "@components/Section";
+import { PageTitle } from "@components/Title";
 
 export const FeaturesContent = () => {
     return (
