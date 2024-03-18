@@ -1,12 +1,14 @@
 import { SectionContainer } from "@components/Section";
 import { Layout } from "@components/Layout";
 import { HomeBanner } from "@components/Banner";
-import { TestimonialsContent } from "./ui/testimonials";
-import { FAQContent } from "./ui/faq";
-import { ContactContent } from "./ui/contact";
-import { CarouselContent } from "./ui/carousel";
-import { WelcomeContent } from "./ui/welcome";
-import { HomePageSEO } from "./ui/seo";
+import {
+    TestimonialsContent,
+    FAQContent,
+    ContactContent,
+    CarouselContent,
+    WelcomeContent,
+    HomePageSEO
+} from "@components/ui/index";
 import { useTheme } from "next-themes";
 import { Hero } from "@components/Hero";
 
