@@ -4,18 +4,40 @@ import { ButtonGroup } from "@components/Button";
 import { Content } from "@components/Content";
 import { SectionContainer } from "@components/Section";
 import { PageTitle } from "@components/Title";
+import { v4 as uuid } from "uuid";
 
-const banners = [
-    "image/banners/01.jpeg",
-    "image/banners/02.jpeg",
-    "image/banners/03.jpeg",
-    "image/banners/04.jpeg",
-    "image/banners/05.jpeg",
-    "image/banners/06.jpeg"
+const heroProps = [
+    {
+        id: uuid(),
+        title: "Redefine Your Space",
+        content:
+            "Tailored Interior Solutions for Residential and Commercial Settings. Elevate your living and working environments with our bespoke interior solutions. Whether it's your home or business, we specialize in creating spaces that reflect your style and enhance functionality.",
+        bgImageName: "image/banners/02.jpeg"
+    },
+    {
+        id: uuid(),
+        title: "Our Skills & Expertise",
+        content:
+            "At Sparkling Star, our expertise extends to both residential and commercial design. From cozy homes to dynamic workspaces, we bring a blend of creativity, technical proficiency, and client-focused dedication to every project.",
+        bgImageName: "image/banners/04.jpeg"
+    },
+    {
+        id: uuid(),
+        title: "Portfolio Highlights",
+        content:
+            "Explore our portfolio to witness the transformation of diverse spaces. From elegant commercial centers to comfortable residential havens, our portfolio demonstrates the adaptability and quality we bring to every project.",
+        bgImageName: "image/banners/05.jpeg"
+    },
+    {
+        id: uuid(),
+        title: "Watch Our Latest Projects",
+        content:
+            "Take a visual journey through our latest residential and commercial projects in our video gallery. See how we skillfully combine design and functionality to create spaces that evoke strong emotions.",
+        bgImageName: "image/banners/06.jpeg"
+    }
 ];
 
-export const Hero = () => {
-    const bgImageName = banners[Math.floor(Math.random() * banners.length)];
+const HeroContent = ({ title, content, bgImageName }) => {
     return (
         <SectionContainer
             className="relative min-h-screen w-full"
@@ -29,20 +51,13 @@ export const Hero = () => {
             <div className="grid min-h-screen px-8">
                 <div className="container relative z-10 my-auto mx-auto grid place-items-center text-center">
                     <PageTitle className="text-black dark:text-white">
-                        Redefine your workspace
+                        {title}
                     </PageTitle>
                     <Content
                         className="text-black dark:text-white text-center"
                         alignment="center"
                     >
-                        <p>
-                            Whether transforming indoor environments for optimal
-                            functionality or enhancing exteriors with
-                            captivating aesthetics, our team is dedicated to
-                            creating cohesive, inspiring spaces that reflect our
-                            clients&apos; visions and elevate the overall design
-                            experience.
-                        </p>
+                        <p>{content}</p>
                     </Content>
                     <ButtonGroup className="hidden md:block mt-8">
                         <a
@@ -56,5 +71,16 @@ export const Hero = () => {
                 </div>
             </div>
         </SectionContainer>
+    );
+};
+
+export const Hero = () => {
+    const item = heroProps[Math.floor(Math.random() * heroProps.length)];
+    return (
+        <HeroContent
+            title={item.title}
+            content={item.content}
+            bgImageName={item.bgImageName}
+        />
     );
 };

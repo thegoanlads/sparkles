@@ -2,14 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { SectionContainer } from "@components/Section";
 import { Nav } from "@components/Nav";
-import { ButtonGroup, Button } from "@components/Button";
-import { Icon } from "@iconify/react";
+import { ButtonGroup } from "@components/Button";
 
 export const Header = () => {
     return (
         <header
             id="header"
-            className="header fixed left-0 w-full z-30 top-0 backdrop-filter dark:bg-white bg-black backdrop-blur-lg"
+            className="header fixed left-0 w-full z-30 top-0 backdrop-filter backdrop-blur-lg"
         >
             <SectionContainer className="header--container wrap wrap-px">
                 <div className="header-logo--container">
