@@ -45,7 +45,7 @@ export const ContentImage = () => {
     const { theme, setTheme } = useTheme();
 
     return (
-        <SectionContainer className="process-items max-w-4xl mx-auto mt-16 space-y-16">
+        <SectionContainer className="process-items w-full mx-auto mt-16 space-y-16">
             {ContentImageData.map((item) => (
                 <div
                     id={item.id}

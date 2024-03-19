@@ -8,7 +8,7 @@ export const ThemeChanger = () => {
             className="font-normal"
             onClick={() => setTheme(theme == "light" ? "dark" : "light")}
         >
-            Change theme
+            {theme == "light" ? "Dark theme" : "Light theme"}
         </button>
     );
 };

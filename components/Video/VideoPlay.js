@@ -3,7 +3,7 @@ import ReactPlayer from "react-player";
 
 export function VideoPlay({ videosrc }) {
     return (
-        <section className="w-full max-w-4xl mx-auto flex flex-col items-center px-4 py-10">
+        <section className="w-full mx-auto flex flex-col items-center px-4 py-10">
             <ReactPlayer
                 // width="500px"
                 // height="400px"
