@@ -11,9 +11,24 @@ import {
 } from "@components/ui/index";
 import { useTheme } from "next-themes";
 import { Hero } from "@components/Hero";
+import { VideoPlay } from "@components/Video";
+
+const videoLinks = [
+    "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+    "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+    "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+    "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+    "https://storage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    "https://storage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
+    "https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
+];
 
 export default function Home() {
     const { theme, setTheme } = useTheme();
+    const item = videoLinks[Math.floor(Math.random() * videoLinks.length)];
     return (
         <Layout className="">
             {/* { SEO Content } */}
@@ -25,6 +40,8 @@ export default function Home() {
             >
                 {/* { Page Hero } */}
                 <Hero />
+                {/* { Page Video } */}
+                <VideoPlay videosrc={item} />
                 {/* { Page Banner } */}
                 {/* <HomeBanner /> */}
                 {/* { Carousel Banner } */}
